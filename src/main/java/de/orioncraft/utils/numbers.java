@@ -83,14 +83,14 @@ public enum numbers {
             {'x','o','o','x'},
             {'o','x','x','o'}
     },'9') , QUESTION(new char[][]{
-            {'o','x','x','o'},
-            {'x','o','o','x'},
-            {'o','o','o','x'},
-            {'o','o','x','o'},
-            {'o','o','x','o'},
-            {'o','o','o','o'},
-            {'o','o','x','o'}
-    },'9');
+            {'o','x','x','x','o'},
+            {'x','o','o','o','x'},
+            {'o','o','o','o','x'},
+            {'o','o','o','x','o'},
+            {'o','o','x','o','o'},
+            {'o','o','o','o','o'},
+            {'o','o','x','o','o'}
+    },'?');
 
 
 
@@ -114,32 +114,11 @@ public enum numbers {
     
 
     static public numbers getByChar(char i){
-        switch (i){
-            case 1:
-                return one;
-            case 2:
-                return two;
-            case 3:
-                return three;
-            case 4:
-                return four;
-            case 5:
-                return five;
-            case 6:
-                return six;
-            case 7:
-                return seven;
-            case 8:
-                return eight;
-            case 9:
-                return nine;
-            case 0:
-                return zero;
-            default:
-                return QUESTION;
-
-        }
-
+       
+       
+       
+       
+       return QUESTION;
     }
 }
 
