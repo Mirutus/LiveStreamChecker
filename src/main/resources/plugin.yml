@@ -1,0 +1,7 @@
+name: ${project.artifactId}
+version: ${project.version}
+author: Mirutus
+main: de.orioncraft.Main
+commands:
+  skull:
+  subcount:
