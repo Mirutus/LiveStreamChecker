@@ -9,7 +9,7 @@ public enum numbers {
             {'x','o','o','x'},
             {'x','o','o','x'},
             {'o','x','x','o'}
-    }),
+    },'0'),
     one(new char[][]{
             {'o','o','x'},
             {'o','x','x'},
@@ -18,7 +18,7 @@ public enum numbers {
             {'o','o','x'},
             {'o','o','x'},
             {'o','o','x'}
-    }), two(new char[][]{
+    },'1'), two(new char[][]{
             {'o','x','x','o'},
             {'x','o','o','x'},
             {'o','o','o','x'},
@@ -26,7 +26,7 @@ public enum numbers {
             {'o','x','o','o'},
             {'x','o','o','o'},
             {'x','x','x','x'}
-    }), three(new char[][]{
+    },'2'), three(new char[][]{
             {'x','x','x','o'},
             {'o','o','o','x'},
             {'o','o','o','x'},
@@ -34,7 +34,7 @@ public enum numbers {
             {'o','o','o','x'},
             {'o','o','o','x'},
             {'x','x','x','o'}
-    }), four(new char[][]{
+    },'3'), four(new char[][]{
             {'o','o','x','x','o'},
             {'o','x','o','x','o'},
             {'o','x','o','x','o'},
@@ -42,7 +42,7 @@ public enum numbers {
             {'x','x','x','x','x'},
             {'o','o','o','x','o'},
             {'o','o','o','x','o'}
-    }), five(new char[][]{
+    },'4'), five(new char[][]{
             {'x','x','x','x'},
             {'x','o','o','o'},
             {'x','o','o','o'},
@@ -50,7 +50,7 @@ public enum numbers {
             {'o','o','o','x'},
             {'o','o','o','x'},
             {'x','x','x','o'}
-    }), six(new char[][]{
+    },'5'), six(new char[][]{
             {'o','x','x','x'},
             {'x','o','o','o'},
             {'x','o','o','o'},
@@ -58,7 +58,7 @@ public enum numbers {
             {'x','o','o','x'},
             {'x','o','o','x'},
             {'o','x','x','o'}
-    }), seven(new char[][]{
+    },'6'), seven(new char[][]{
             {'x','x','x','x'},
             {'o','o','o','x'},
             {'o','o','o','x'},
@@ -66,7 +66,7 @@ public enum numbers {
             {'o','o','x','o'},
             {'o','x','o','o'},
             {'o','x','o','o'}
-    }), eight(new char[][]{
+    },'7'), eight(new char[][]{
             {'o','x','x','o'},
             {'x','o','o','x'},
             {'x','o','o','x'},
@@ -74,7 +74,7 @@ public enum numbers {
             {'x','o','o','x'},
             {'x','o','o','x'},
             {'o','x','x','o'}
-    }), nine(new char[][]{
+    },'8') , nine(new char[][]{
             {'o','x','x','o'},
             {'x','o','o','x'},
             {'x','o','o','x'},
@@ -82,26 +82,38 @@ public enum numbers {
             {'o','o','o','x'},
             {'x','o','o','x'},
             {'o','x','x','o'}
-    });
+    },'9') , QUESTION(new char[][]{
+            {'o','x','x','o'},
+            {'x','o','o','x'},
+            {'o','o','o','x'},
+            {'o','o','x','o'},
+            {'o','o','x','o'},
+            {'o','o','o','o'},
+            {'o','o','x','o'}
+    },'9');
 
 
 
     char[][] c;
     int length;
+    char ch;
 
     public int getLength() {
         return length;
     }
 
-    numbers(char[][] c){
+    numbers(char[][] c, char ch){
         this.c = c;
         this.length = c[0].length;
+        this.ch = ch;
     }
     public char[][] getValue(){
         return c;
     }
 
-    static public numbers getByInt(int i){
+    
+
+    static public numbers getByChar(char i){
         switch (i){
             case 1:
                 return one;
@@ -124,7 +136,7 @@ public enum numbers {
             case 0:
                 return zero;
             default:
-                return zero;
+                return QUESTION;
 
         }
 
