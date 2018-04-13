@@ -114,7 +114,11 @@ public enum numbers {
     
 
     static public numbers getByChar(char i){
-       
+       for(numbers n : values()){
+           if(n.ch == i){
+               return n;
+           }
+       }
        
        
        

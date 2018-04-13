@@ -27,7 +27,6 @@ public class LoginEvent implements Listener {
                     JsonString += scan.next() + "\n";
                 } while (scan.hasNext());
                 scan.close();
-                System.out.println(JsonString);
 
                 JsonObject json = (JsonObject) new JsonParser().parse(JsonString);
                 if (json.getAsJsonArray("items").size() > 0) {

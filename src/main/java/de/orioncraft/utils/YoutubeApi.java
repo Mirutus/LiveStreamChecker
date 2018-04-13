@@ -96,7 +96,6 @@ public class YoutubeApi {
             URL url = new URL("https://www.googleapis.com/youtube/v3/search?part=snippet&channelId="+channelId+"&type=video&eventType=live&key=AIzaSyDk1gXj2uFbrqSL7Wj8zzUMO_2XKYxKTVM");
             URLConnection s =url.openConnection();
             s.connect();
-            System.out.println(s.getInputStream());
             Scanner scan = new Scanner(new BufferedInputStream(s.getInputStream()));
             String JsonString = "";
             do {
